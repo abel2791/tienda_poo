@@ -6,100 +6,102 @@
         <link rel="stylesheet" href="assets/css/styles.css" />
     </head>
     <body>
-        <!-- cabecera -->
-        <header id="header">
-            <div id="logo">
-                <img src="assets/img/camiseta.png" alt="Camiseta Logo" />
-                <a href="index.php">
-                    Moda KikSport
-                </a>
-            </div>
-        </header>
-        <!-- menu -->
-        <nav id="menu">
-            <ul>
-                <li>
-                    <a href="#">Inicio</a>
-                </li>
-                <li>
-                    <a href="#">Categoria 1</a>
-                </li>
-                <li>
-                    <a href="#">Categoria 2</a>
-                </li>
-                <li>
-                    <a href="#">Categoria 3</a>
-                </li>
-                <li>
-                    <a href="#">Categoria 4</a>
-                </li>
-                <li>
-                    <a href="#">Categoria 5</a>
-                </li>
-            </ul>
-            
-        </nav>
-        
-        <div id="content">
-             <!-- barra lateral -->
-             <aside>
-                 
-                 <div id="login" class="block_aside">
-                     <form action="#" method="post">
-                         <label for="email">Email</label>
-                         <input type="email" name="email" />
-                         <label for="password">Contraseña</label>
-                         <input type="password" name="password" />
-                         <input type="submit" value="Enviar" />                         
-                     </form>
-                     
-                     <a href="#">Mis pedidos</a>
-                     <a href="#">Gestionar pedidos</a>
-                     <a href="#">Gestionar categorias</a>
-                 </div>
-                 
-             </aside>
-               
+        <div id="container">
+            <!-- cabecera -->
+            <header id="header">
+                <div id="logo">
+                    <img src="assets/img/camiseta.png" alt="Camiseta Logo" />
+                    <a href="index.php">
+                        Moda KikSport
+                    </a>
+                </div>
+            </header>
+            <!-- menu -->
+            <nav id="menu">
+                <ul>
+                    <li>
+                        <a href="#">Inicio</a>
+                    </li>
+                    <li>
+                        <a href="#">Categoria 1</a>
+                    </li>
+                    <li>
+                        <a href="#">Categoria 2</a>
+                    </li>
+                    <li>
+                        <a href="#">Categoria 3</a>
+                    </li>
+                    <li>
+                        <a href="#">Categoria 4</a>
+                    </li>
+                    <li>
+                        <a href="#">Categoria 5</a>
+                    </li>
+                </ul>
+
+            </nav>
+
+            <div id="content">
+                <!-- barra lateral -->
+                <aside>
+
+                    <div id="login" class="block_aside">
+                        <form action="#" method="post">
+                            <label for="email">Email</label>
+                            <input type="email" name="email" />
+                            <label for="password">Contraseña</label>
+                            <input type="password" name="password" />
+                            <input type="submit" value="Enviar" />                         
+                        </form>
+
+                        <a href="#">Mis pedidos</a>
+                        <a href="#">Gestionar pedidos</a>
+                        <a href="#">Gestionar categorias</a>
+                    </div>
+
+                </aside>
+
                 <!-- contenido central -->
                 <div id="central">
-                    
+
                     <div class="product">
                         <img src="assets/img/camiseta.png" />
                         <h2>Camiseta Azul Ancha</h2>
                         <p>30 euros</p>
                         <a href="">Comprar</a>
                     </div>
-                    
-                    
-                     <div class="product">
+
+
+                    <div class="product">
                         <img src="assets/img/camiseta.png" />
                         <h2>Camiseta Azul Ancha</h2>
                         <p>30 euros</p>
                         <a href="">Comprar</a>
                     </div>
-                    
-                     <div class="product">
+
+                    <div class="product">
                         <img src="assets/img/camiseta.png" />
                         <h2>Camiseta Azul Ancha</h2>
                         <p>30 euros</p>
                         <a href="">Comprar</a>
                     </div>
-                    
-                    
-                    
-                    
-                    
-                    
-                    
+
+
+
+
+
+
+
                 </div>
-                
-                
+
+
+            </div>
+
+
+            <!-- pie de pagina -->
+            <footer id="footer">
+                <p>Desarrollado por Abel Enrique &COPY; <?= date('Y') ?></p>
+            </footer>
         </div>
-        
-        
-        <!-- pie de pagina -->
-        <footer id="footer">
-            <p>Desarrollado por Abel Enrique &COPY; <?=date('Y')?></p>
-        </footer>
     </body>
 </html>
