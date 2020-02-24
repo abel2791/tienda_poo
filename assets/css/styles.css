@@ -113,6 +113,8 @@ header{
     background: white;
 }
 
+
+
 /*BARRA LATERAL*/
 #lateral{
     width: 22%;
@@ -232,6 +234,10 @@ button{
     box-shadow: -5px -1px 5px #ddd;
     padding: 25px;
 }
+
+/*.xdebug-var-dump{
+  color: white;    
+}*/
 
 #central h1{
     font-size: 24px;
