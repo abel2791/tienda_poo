@@ -13,11 +13,17 @@ class UsuarioController{
      
      public function save(){
          if(isset($_POST)){
+             $nombre    = isset($_POST['nombre']) ? $_POST['nombre'] :false;
+             $apellidos = isset($_POST['apellidos']) ? $_POST['apellidos'] :false;
+             $email     = isset($_POST['email']) ? $_POST['email'] :false;
+             $password  =isset($_POST['nombre']) ? $_POST['nombre'] :false;
+             
+             if($nombre && $apellidos && $email && $password){
              $usuario = new Usuario();
-             $usuario->setNombre($_POST['nombre']);
-             $usuario->setApellidos($_POST['apellidos']);
-             $usuario->setEmail($_POST['email']);
-             $usuario->setPassword($_POST['password']);
+             $usuario->setNombre($nombre);
+             $usuario->setApellidos($apellidos);
+             $usuario->setEmail($email);
+             $usuario->setPassword($password);
              
              $save = $usuario->save();//esto lo que hace es aguardar mi objeto en un registro de mi db
              
@@ -25,7 +31,10 @@ class UsuarioController{
                  $_SESSION['register'] = 'complete';
              }else{
                  $_SESSION['register'] = 'failed';
-             }
+              }
+            }else{
+               $_SESSION['register'] = 'failed'; 
+            }
              
          }else{
              $_SESSION['register'] = 'failed';
