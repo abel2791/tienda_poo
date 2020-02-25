@@ -2,7 +2,9 @@
 //todo esto se le conoce  controlador frontal, porque se encarga de cargar un fichero una accion en funcion
 // de lo que me llega por la url, es el unico fichero que se encarga de cargarlo absolutamente todo
 //para arrancar el mvc pones en la url: http://localhost/master-php/aprendiendo-php-mvc/?controller=Usuario&action=mostrarTodos
+session_start();
 require_once 'autoload.php';
+require_once 'config/db.php';
 require_once 'config/parameters.php';
 require_once 'views/layout/header.php';
 require_once 'views/layout/sidebar.php';
