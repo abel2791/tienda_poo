@@ -25,7 +25,7 @@ class UsuarioController{
              $usuario->setEmail($email);
              $usuario->setPassword($password);
              
-             $save = $usuario->save();//esto lo que hace es aguardar mi objeto en un registro de mi db
+             $save = $usuario->save();//guardo mi objeto en un registro de mi db
              
              if($save){
                  $_SESSION['register'] = 'complete';
@@ -40,5 +40,29 @@ class UsuarioController{
              $_SESSION['register'] = 'failed';
          }
          header("Location:".base_url.'Usuario/registro');
+     }
+     
+     public function login(){
+         if(isset($_POST)){
+               //identificar al usuario
+               //consulta a la base de datos
+               $usuario = new Usuario();
+               $usuario->setEmail($_POST['email']);
+               $usuario->setPassword($_POST['password']);
+               
+               $identity = $usuario->login();
+               
+               if($identity && is_object($identity)){
+                   $_SESSION['identity'] = $identity;
+                   
+                   if($identity->role == 'admin'){
+                       $_SESSION['admin'] = true;
+                   }
+               }else{
+                   $_SESSION['error_login'] = "identificacion fallida";
+               }
+               //crear una sesion
+         }
+         header("Location:".base_url);
      }
 }
