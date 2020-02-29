@@ -1,7 +1,8 @@
 <?php
 
 class CategoriaController{
+    
     public function index(){
-        echo 'controlador Categorias, accion index';
+        require_once 'views/categoria/index.php';
     }
 }
