@@ -25,16 +25,12 @@
                         <a href="#">Inicio</a>
                     </li>
                     <?php while ($cat = $categorias->fetch_object()):?>
+                     <!--el fetch es para obtener un objeto en lugar de un array-->
                         <li>
                             <a href="#"><?=$cat->nombre?></a>
                         </li>
-                    <?php endwhile; ?>
-                    
-                    
-                    
+                    <?php endwhile; ?>                                                            
                 </ul>
-
             </nav>
-
             <div id="content">
 
