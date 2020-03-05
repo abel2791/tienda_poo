@@ -1,8 +1,31 @@
-<?php
+<h1>Crear nuevos productos</h1>
+<div class="form_container">
+    <form action="<?= base_url ?>Producto/save" method="POST">
+        <label for="nombre">Nombre</label>
+        <input type="text"name="nombre" />
 
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+        <label for="descripcion">Descripcion</label>
+        <textarea name="descripcion" ></textarea>
 
+        <label for="precio">Precio</label>
+        <input type="text"name="precio" />
+
+        <label for="stock">Stock</label>
+        <input type="number"name="stock" />
+
+        <label for="categoria">Categoria</label>
+        <?php $categorias = Utils::showCategorias(); ?>
+        <select name="categoria">
+            <?php while ($cat = $categorias->fetch_object()): ?>
+                <option value="<?= $cat->id ?>">
+                    <?= $cat->nombre ?> 
+                </option>
+            <?php endwhile; ?>
+        </select>
+
+        <label for="imagen">Imagen</label>
+        <input type="file"name="imagen" />
+        
+        <input type="submit" value="Guardar" />
+    </form>
+</div>
