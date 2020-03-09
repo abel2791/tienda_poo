@@ -1,7 +1,7 @@
 <?php
 //el modelo reprensenta a los registros de la tabla categoria en la bd 
 //modelo logica de negocios BD
-
+//
 class Categoria{
     private $id;
     private $nombre;
