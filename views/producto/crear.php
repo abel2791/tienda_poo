@@ -1,6 +1,7 @@
 <h1>Crear nuevos productos</h1>
 <div class="form_container">
-    <form action="<?= base_url ?>Producto/save" method="POST">
+    <!--el multipart me permite enviar ficheros en le formulario-->
+    <form action="<?= base_url ?>Producto/save" method="POST" enctype="multipart/form-data">
         <label for="nombre">Nombre</label>
         <input type="text"name="nombre" />
 
