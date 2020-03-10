@@ -8,8 +8,15 @@
 <?php elseif(isset($_SESSION['producto']) && $_SESSION['producto'] != 'complete'): ?>
     <strong class="alert-green">El producto No se ha creado correctamente</strong>
 <?php endif; ?>
-    
 <?php Utils::deleteSession('producto'); ?>
+    
+    
+<?php if(isset($_SESSION['delete']) && $_SESSION['delete'] == 'complete'): ?>
+    <strong class="alert-green">El producto se ha borrado correctamente</strong>
+<?php elseif(isset($_SESSION['delete']) && $_SESSION['delete'] != 'complete'): ?>
+    <strong class="alert-green">El producto No se ha borrado correctamente</strong>
+<?php endif; ?>
+<?php Utils::deleteSession('delete'); ?>    
 
 <table>
     <tr>
@@ -26,8 +33,8 @@
         <td><?= $pro->precio;?></td>
         <td><?= $pro->stock;?></td>
         <td>
-            <a href="<?=base_url?>Producto/editar?id=<?=$pro->id?>" class="button button-gestion">Editar</a>
-            <a href="<?=base_url?>Producto/eliminar?id=<?=$pro->id?>" class="button button-gestion button-red">Eliminar</a>
+            <a href="<?=base_url?>Producto/editar&id=<?=$pro->id?>" class="button button-gestion">Editar</a>
+            <a href="<?=base_url?>Producto/eliminar&id=<?=$pro->id?>" class="button button-gestion button-red">Eliminar</a>
         </td>
     </tr>
     <?php endwhile; ?>
