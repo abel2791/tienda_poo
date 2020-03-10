@@ -77,4 +77,12 @@ class ProductoController{
         }
         header('Location:'.base_url.'Producto/gestion');
     }
+    
+    public function editar(){
+        var_dump($_GET);
+    }
+    
+    public function eliminar(){
+         var_dump($_GET);
+    }
 }
