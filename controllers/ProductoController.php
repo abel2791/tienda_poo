@@ -79,7 +79,21 @@ class ProductoController{
     }
     
     public function editar(){
-        var_dump($_GET);
+        Utils::isAdmin();
+        if(isset($_GET['id'])){
+            $id = ($_GET['id']);
+            $edit = true;
+            
+            $producto = new Producto();
+            $producto->setId($id);
+            
+            $pro = $producto->getOne();
+            
+            
+            require_once 'views/producto/crear.php';
+        }else{
+             header('Location:'.base_url.'Producto/gestion');
+        }
     }
     
     public function eliminar(){
