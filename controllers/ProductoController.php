@@ -4,7 +4,8 @@ require_once 'models/Producto.php';
 
 class ProductoController{
     public function index(){
-        
+        $producto = new Producto();
+        $productos = $producto->getRandom(6);
         
         //renderizar
         require_once 'views/producto/destacados.php';
