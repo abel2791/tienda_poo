@@ -5,9 +5,9 @@ require_once 'models/Producto.php';
 class CarritoController{
     
     public function index(){
-        var_dump($_SESSION['carrito']);
+        $carrito = $_SESSION['carrito'];
         
-        require_once 'views/carrito/ver.php';
+        require_once 'views/carrito/index.php';
     }
     
     public function add(){
