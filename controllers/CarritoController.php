@@ -6,8 +6,8 @@ class CarritoController{
     
     public function index(){
         $carrito = $_SESSION['carrito'];
-        
         require_once 'views/carrito/index.php';
+        
     }
     
     public function add(){
@@ -15,10 +15,9 @@ class CarritoController{
         if(isset($_GET['id'])){
             $producto_id = $_GET['id'];
         }else{
-            header('Location:'.base_url);
+            header("Location:".base_url);
         }
-        
-        
+               
         if(isset($_SESSION['carrito'])){
             $counter = 0;
             foreach($_SESSION['carrito'] as $indice => $elemento){

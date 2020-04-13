@@ -390,3 +390,22 @@ button{
     background: #222222;
     border-top: 4px solid #01b1ea;
 }
+
+/*CARRITO*/
+.total-carrito{
+    width: 330px;
+    float: right;
+}
+
+.total-carrito h3{
+    display: block;
+    float: left;
+    margin-top: 5px;
+    
+}
+
+.button-pedido{
+    display: block;
+    float: right;
+    width: 110px;
+}

@@ -12,7 +12,7 @@ class Usuario{
     private $db;
     
     public function __construct() {
-        $this->db = Database::connect();;
+        $this->db = Database::connect();
     }
     function getId() {
         return $this->id;
