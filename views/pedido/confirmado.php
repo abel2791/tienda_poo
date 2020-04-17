@@ -11,7 +11,7 @@
         Número de pedido: <?=$pedido->id?> <br>
         Total a pagar: $<?=$pedido->coste?><br>
         Productos:
-        <?php while ($producto = $productos->fetch_object()):?>
+        
         <table>
             <tr>
                 <th>Imagen</th>
@@ -19,6 +19,7 @@
                 <th>Precio</th>
                 <th>Unidades</th>
             </tr>
+            <?php while ($producto = $productos->fetch_object()):?>
             <tr>
               <td>
                  <?php if ($producto->imagen != null): ?>
