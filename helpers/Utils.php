@@ -20,6 +20,15 @@ class Utils{
         }
     }
     
+    //esto me comprueba si estamos identificados
+    public static function isIdentity(){
+        if(!isset($_SESSION['identity'])){
+            header("Location:".base_url);
+        }else{
+            return true;
+        }
+    }
+    
     public static function showCategorias(){
         require_once 'models/Categoria.php';
         $categoria = new Categoria();
