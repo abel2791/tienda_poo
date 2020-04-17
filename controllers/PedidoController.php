@@ -73,9 +73,13 @@ class PedidoController{
             //sacar los pedidos del usuario
             $pedido->setUsuario_id($usuario_id);
             $pedidos = $pedido->getAllByUser();
-            
-            
-            
+ 
             require_once 'views/pedido/mis_pedidos.php';
+        }
+        
+        public function detalle(){
+            Utils::isIdentity();
+            
+            require_once 'views/pedido/detalle.php';
         }
 }
