@@ -63,4 +63,10 @@ class PedidoController{
             }            
             require_once 'views/pedido/confirmado.php';
         }
+        
+        public function mis_pedidos(){
+            
+            
+            require_once 'views/pedido/mis_pedidos.php';
+        }
 }
